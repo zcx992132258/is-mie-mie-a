@@ -1,0 +1,59 @@
+{
+    "name": "is-mie-mie-a",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vue-tsc && vite build",
+        "preview": "vite preview",
+        "eslint:comment": "使用 ESLint 检查并自动修复 src 目录下所有扩展名为 .js 和 .vue 的文件",
+        "eslint": "eslint --ext .js,.vue --ignore-path .gitignore --fix src",
+        "prettier:comment": "自动格式化当前目录下的所有文件",
+        "prettier": "prettier --write",
+        "commit:comment": "引导设置规范化的提交信息",
+        "commit": "git-cz"
+    },
+    "dependencies": {
+        "element-plus": "^2.2.25",
+        "pinia": "^2.0.27",
+        "vue": "^3.2.41",
+        "vue-router": "^4.1.6",
+        "vue-styled-components": "^1.6.0"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^17.3.0",
+        "@commitlint/config-conventional": "^17.3.0",
+        "@types/node": "^18.11.9",
+        "@typescript-eslint/eslint-plugin": "^5.44.0",
+        "@typescript-eslint/parser": "^5.44.0",
+        "@vitejs/plugin-vue": "^3.2.0",
+        "@vitejs/plugin-vue-jsx": "^2.1.1",
+        "commitizen": "^4.2.5",
+        "commitlint-config-cz": "^0.13.3",
+        "cz-conventional-changelog": "^3.3.0",
+        "cz-customizable": "^7.0.0",
+        "eslint": "^8.28.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "eslint-plugin-vue": "^9.8.0",
+        "husky": "^8.0.2",
+        "lint-staged": "^13.0.4",
+        "prettier": "^2.8.0",
+        "typescript": "^4.6.4",
+        "vite": "^3.2.3",
+        "vite-plugin-style-import": "^2.0.0",
+        "vue-tsc": "^1.0.9"
+    },
+    "config": {
+        "commitizen": {
+            "path": "node_modules/cz-customizable"
+        }
+    },
+    "lint-staged": {
+        "*.{js,ts}": [
+            "npm run eslint",
+            "npm run prettier"
+        ]
+    }
+}
